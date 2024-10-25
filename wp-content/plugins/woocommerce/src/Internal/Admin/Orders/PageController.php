@@ -143,6 +143,7 @@ class PageController {
 		}
 
 		// Not on an Orders page.
+//		$plugin_page = $plugin_page ?? '';
 		if ( 'admin.php' !== $pagenow || 0 !== strpos( $plugin_page, 'wc-orders' ) ) {
 			return;
 		}

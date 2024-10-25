@@ -1,0 +1,4 @@
+/var/www/html/sankaqua/wp-content/themes/hnice
+/var/www/html/sankaqua/wp-content/themes/hnice-child
+/var/www/html/sankaqua/wp-content/themes/twentytwentyfour
+/var/www/html/sankaqua/wp-content/themes/twentytwentytwo
