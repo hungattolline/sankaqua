@@ -12570,7 +12570,7 @@ msgid "Use image"
 msgstr ""
 
 #: includes/admin/class-wc-admin-taxonomies.php:329
-msgid "Product categories for your store can be managed here. To change the order of categories on the front-end you can drag and drop to sort them. To see more categories listed click the \"screen options\" link at the top-right of this page."
+msgid "Thư mục sản phẩm for your store can be managed here. To change the order of categories on the front-end you can drag and drop to sort them. To see more categories listed click the \"screen options\" link at the top-right of this page."
 msgstr ""
 
 #: includes/admin/class-wc-admin-taxonomies.php:340
@@ -14464,7 +14464,7 @@ msgstr ""
 #: includes/class-wc-post-types.php:97
 #: includes/react-admin/connect-existing-pages.php:258
 #: includes/widgets/class-wc-widget-product-categories.php:43
-msgid "Product categories"
+msgid "Thư mục sản phẩm"
 msgstr ""
 
 #: includes/admin/meta-boxes/class-wc-meta-box-coupon-data.php:231
@@ -14472,7 +14472,7 @@ msgid "Any category"
 msgstr ""
 
 #: includes/admin/meta-boxes/class-wc-meta-box-coupon-data.php:242
-msgid "Product categories that the coupon will be applied to, or that need to be in the cart in order for the \"Fixed cart discount\" to be applied."
+msgid "Thư mục sản phẩm that the coupon will be applied to, or that need to be in the cart in order for the \"Fixed cart discount\" to be applied."
 msgstr ""
 
 #: includes/admin/meta-boxes/class-wc-meta-box-coupon-data.php:247
@@ -14484,7 +14484,7 @@ msgid "No categories"
 msgstr ""
 
 #: includes/admin/meta-boxes/class-wc-meta-box-coupon-data.php:260
-msgid "Product categories that the coupon will not be applied to, or that cannot be in the cart in order for the \"Fixed cart discount\" to be applied."
+msgid "Thư mục sản phẩm that the coupon will not be applied to, or that cannot be in the cart in order for the \"Fixed cart discount\" to be applied."
 msgstr ""
 
 #: includes/admin/meta-boxes/class-wc-meta-box-coupon-data.php:269
@@ -21605,7 +21605,7 @@ msgstr ""
 #: includes/class-wc-post-types.php:333
 #: assets/client/admin/chunks/2089.js:1
 #: assets/client/admin/chunks/analytics-report-variations.js:1
-msgid "Search products"
+msgid "Tìm kiếm sản phẩm"
 msgstr ""
 
 #: includes/class-wc-post-types.php:334
@@ -27013,7 +27013,7 @@ msgstr ""
 #: includes/rest-api/Controllers/Version1/class-wc-rest-products-v1-controller.php:1783
 #: includes/rest-api/Controllers/Version2/class-wc-rest-products-v2-controller.php:1733
 #: includes/rest-api/Controllers/Version3/class-wc-rest-products-controller.php:912
-msgid "Product status (post status)."
+msgid "Trạng thái sản phẩm (post status)."
 msgstr ""
 
 #: includes/rest-api/Controllers/Version1/class-wc-rest-products-v1-controller.php:1790
@@ -31455,7 +31455,7 @@ msgstr ""
 #: patterns/filters.php:22
 #: assets/client/blocks/filter-wrapper.js:1
 #: assets/client/blocks/price-filter.js:5
-msgid "Filter by price"
+msgid "Lọc theo giá"
 msgstr ""
 
 #: includes/widgets/class-wc-widget-product-categories.php:37
@@ -32575,14 +32575,14 @@ msgstr ""
 
 #: patterns/product-search-form.php:9
 msgctxt "placeholder for search field"
-msgid "Search products…"
+msgid "Tìm kiếm sản phẩm…"
 msgstr ""
 
 #: patterns/related-products.php:17
 #: templates/single-product/related.php:27
 #: assets/client/blocks/all-products.js:22
 #: assets/client/blocks/product-query.js:14
-msgid "Related products"
+msgid "Sản phẩm liên quan"
 msgstr ""
 
 #: patterns/social-follow-us-in-social-media.php:46
@@ -33503,7 +33503,7 @@ msgid "Stats about variations."
 msgstr ""
 
 #: src/Admin/API/Reports/Controller.php:61
-msgid "Product categories detailed reports."
+msgid "Thư mục sản phẩm detailed reports."
 msgstr ""
 
 #: src/Admin/API/Reports/Controller.php:65
@@ -35981,7 +35981,7 @@ msgstr[1] ""
 #: src/Blocks/BlockTypes/ProductSearch.php:44
 #: assets/client/blocks/legacy-template.js:5
 #: assets/client/blocks/product-search.js:1
-msgid "Search products…"
+msgid "Tìm kiếm sản phẩm…"
 msgstr ""
 
 #. translators: %d is number of items in stock for product
@@ -42006,7 +42006,7 @@ msgid "Search for:"
 msgstr ""
 
 #: templates/product-searchform.php:25
-msgid "Search products&hellip;"
+msgid "Tìm kiếm sản phẩm&hellip;"
 msgstr ""
 
 #: templates/product-searchform.php:26

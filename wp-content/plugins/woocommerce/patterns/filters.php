@@ -19,7 +19,7 @@
 
 <!-- wp:woocommerce/filter-wrapper {"filterType":"price-filter"} -->
 <div class="wp-block-woocommerce-filter-wrapper"><!-- wp:heading {"level":3} -->
-<h3><?php esc_html_e( 'Filter by price', 'woocommerce' ); ?></h3>
+<h3><?php esc_html_e( 'Lọc theo giá', 'woocommerce' ); ?></h3>
 <!-- /wp:heading -->
 
 <!-- wp:woocommerce/price-filter {"heading":"","lock":{"remove":true}} -->

@@ -281,7 +281,7 @@ if (!function_exists('hnice_product_search')) {
                         <input type="search"
                                id="woocommerce-product-search-field-<?php echo isset($index) ? absint($index) : 0; ?>"
                                class="search-field"
-                               placeholder="<?php echo esc_attr__('Search products&hellip;', 'hnice'); ?>"
+                               placeholder="<?php echo esc_attr__('Tìm kiếm sản phẩm&hellip;', 'hnice'); ?>"
                                autocomplete="off" value="<?php echo get_search_query(); ?>" name="s"/>
                         <button type="submit"
                                 value="<?php echo esc_attr_x('Search', 'submit button', 'hnice'); ?>"><?php echo esc_html_x('Search', 'submit button', 'hnice'); ?></button>
@@ -733,9 +733,9 @@ if (!function_exists('hnice_stock_label')) {
     function hnice_stock_label() {
         global $product;
         if ($product->is_in_stock()) {
-            echo '<span class="inventory_status"><span class="stock-title screen-reader-text">' . esc_html__('Availability:', 'hnice') . '</span> ' . esc_html__('In Stock', 'hnice') . '</span>';
+            echo '<span class="inventory_status"><span class="stock-title screen-reader-text">' . esc_html__('Availability:', 'hnice') . '</span> ' . esc_html__('Còn hàng', 'hnice') . '</span>';
         } else {
-            echo '<span class="inventory_status out-stock"><span class="stock-title screen-reader-text">' . esc_html__('Availability:', 'hnice') . '</span> ' . esc_html__('Out of Stock', 'hnice') . '</span>';
+            echo '<span class="inventory_status out-stock"><span class="stock-title screen-reader-text">' . esc_html__('Availability:', 'hnice') . '</span> ' . esc_html__('Hết hàng', 'hnice') . '</span>';
         }
     }
 }
@@ -1112,7 +1112,8 @@ if (!function_exists('hnice_woocommerce_deal_progress')) {
 if (!function_exists('hnice_single_product_extra')) {
     function hnice_single_product_extra() {
         global $product;
-        $product_extra = hnice_get_theme_option('single_product_content_meta', '');
+        // $product_extra = hnice_get_theme_option('single_product_content_meta', '');
+        $product_extra = '';
         $product_extra = get_post_meta($product->get_id(), '_extra_info', true) !== '' ? get_post_meta($product->get_id(), '_extra_info', true) : $product_extra;
 
         if ($product_extra !== '') {
@@ -1345,10 +1346,7 @@ if (!function_exists('hnice_single__product_button')) {
     function hnice_single__product_button () {
         ?>
         <div class="product_button">
-            <?php
-            hnice_wishlist_button();
-            hnice_compare_button();
-            ?>
+            
         </div>
         <?php
     }

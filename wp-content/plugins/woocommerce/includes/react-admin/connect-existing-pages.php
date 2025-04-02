@@ -249,13 +249,13 @@ wc_admin_connect_page(
 	)
 );
 
-// WooCommerce > Products > Product categories.
+// WooCommerce > Products > Thư mục sản phẩm.
 wc_admin_connect_page(
 	array(
 		'id'        => 'woocommerce-product-categories',
 		'parent'    => 'woocommerce-products',
 		'screen_id' => 'edit-product_cat',
-		'title'     => __( 'Product categories', 'woocommerce' ),
+		'title'     => __( 'Thư mục sản phẩm', 'woocommerce' ),
 	)
 );
 

@@ -393,7 +393,7 @@ table.shop_table_responsive.my_account_orders .order-actions::before {
   display: inline-block;
 }
 .form-row.woocommerce-validated input.input-text {
-  box-shadow: inset 2px 0 0 #0f834d;
+  box-shadow: inset 2px 0 0 #00baee;
 }
 .form-row.woocommerce-invalid input.input-text {
   box-shadow: inset 2px 0 0 #e2401c;
@@ -756,7 +756,7 @@ p.no-comments {
   margin-left: 0;
   margin-bottom: 30px;
   padding: 1.3em 1.618034em 1em;
-  background-color: #0f834d;
+  background-color: #00baee;
   border-radius: 2px;
   color: #fff;
   clear: both;
@@ -3690,7 +3690,7 @@ ul.products .slick-disabled:before,
   display: none;
 }
 .stock.in-stock {
-  color: #0f834d;
+  color: #00baee;
 }
 .stock.out-of-stock {
   color: #e2401c;
@@ -5509,7 +5509,7 @@ table.woocommerce-checkout-review-order-table .variation dt {
 }
 
 .woocommerce-order .woocommerce-thankyou-order-received {
-  color: #0f834d;
+  color: #00baee;
   background-color: #f8f8f8;
   font-size: 24px;
   font-size: 1.5rem;
@@ -5695,7 +5695,7 @@ form.woocommerce-form-track-order input, form.woocommerce-form-track-order butto
   font-size: 0.875em;
 }
 .woocommerce-password-strength.strong {
-  color: #0f834d;
+  color: #00baee;
 }
 .woocommerce-password-strength.short {
   color: #e2401c;

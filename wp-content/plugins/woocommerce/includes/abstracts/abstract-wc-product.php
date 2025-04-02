@@ -757,7 +757,7 @@ class WC_Product extends WC_Abstract_Legacy_Product {
 	 * Set product status.
 	 *
 	 * @since 3.0.0
-	 * @param string $status Product status.
+	 * @param string $status Trạng thái sản phẩm.
 	 */
 	public function set_status( $status ) {
 		$this->set_prop( 'status', $status );

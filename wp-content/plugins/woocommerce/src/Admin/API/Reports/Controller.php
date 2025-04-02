@@ -58,7 +58,7 @@ class Controller extends GenericController {
 			),
 			array(
 				'slug'        => 'categories',
-				'description' => __( 'Product categories detailed reports.', 'woocommerce' ),
+				'description' => __( 'Thư mục sản phẩm detailed reports.', 'woocommerce' ),
 			),
 			array(
 				'slug'        => 'categories/stats',

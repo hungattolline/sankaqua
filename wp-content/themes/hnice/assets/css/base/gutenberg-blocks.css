@@ -131,7 +131,7 @@
 .editor-styles-wrapper .wp-block-archives a:hover,
 .editor-styles-wrapper .wp-block-categories a:hover,
 .editor-styles-wrapper .wp-block-latest-posts a:hover {
-  color: #E6AF5D;
+  color: #00baee;
 }
 .hentry .entry-content .wp-block-latest-posts__post-date,
 .editor-styles-wrapper .wp-block-latest-posts__post-date {
@@ -924,7 +924,7 @@ body:not(.page-template-template-fullwidth-php):not(.hnice-full-width-content) .
 .editor-styles-wrapper .wp-block-rss a:hover,
 .editor-styles-wrapper .wp-block-latest-comments a:hover,
 .editor-styles-wrapper .wp-block-tag-cloud a:hover {
-  color: #E6AF5D;
+  color: #00baee;
 }
 .hentry .entry-content .wp-block-latest-comments,
 .editor-styles-wrapper .wp-block-latest-comments {

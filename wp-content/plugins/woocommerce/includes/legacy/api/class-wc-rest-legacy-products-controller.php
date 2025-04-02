@@ -459,7 +459,7 @@ class WC_REST_Legacy_Products_Controller extends WC_REST_CRUD_Controller {
 			$product->set_cross_sell_ids( $crosssells );
 		}
 
-		// Product categories.
+		// Thư mục sản phẩm.
 		if ( isset( $request['categories'] ) && is_array( $request['categories'] ) ) {
 			$product = $this->save_taxonomy_terms( $product, $request['categories'] );
 		}

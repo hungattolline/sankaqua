@@ -583,7 +583,7 @@ msgid "Limit"
 msgstr ""
 
 #: wpc-smart-wishlist.php:1335
-msgid "Related products"
+msgid "Sản phẩm liên quan"
 msgstr ""
 
 #: wpc-smart-wishlist.php:1338

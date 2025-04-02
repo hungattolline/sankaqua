@@ -643,7 +643,7 @@ class ProductHelper implements Service, HelperNotificationInterface {
 		} catch ( InvalidValue $exception ) {
 			do_action(
 				'woocommerce_gla_debug_message',
-				sprintf( 'Product status returned null for invalid product (ID: %s).', $wc_product->get_id() ),
+				sprintf( 'Trạng thái sản phẩm returned null for invalid product (ID: %s).', $wc_product->get_id() ),
 				__METHOD__
 			);
 

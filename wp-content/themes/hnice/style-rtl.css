@@ -466,7 +466,7 @@ th {
 1.1 Typography
 --------------------------------------------------------------*/
 :root {
-  --e-global-color-primary: #E6AF5D;
+  --e-global-color-primary: #00baee;
   --e-global-color-secondary: #332F2C;
   --e-global-color-text: #8D9396;
   --e-global-color-accent: #332F2C;
@@ -8387,7 +8387,7 @@ p.order-again .button::after {
   line-height: 1;
   vertical-align: middle;
   content: "";
-  color: #0f834d;
+  color: #00baee;
   position: absolute;
   top: 0;
   right: 0;

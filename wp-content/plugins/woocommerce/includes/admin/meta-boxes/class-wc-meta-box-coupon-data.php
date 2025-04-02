@@ -227,7 +227,7 @@ class WC_Meta_Box_Coupon_Data {
 				// Categories.
 				?>
 				<p class="form-field">
-					<label for="product_categories"><?php _e( 'Product categories', 'woocommerce' ); ?></label>
+					<label for="product_categories"><?php _e( 'Thư mục sản phẩm', 'woocommerce' ); ?></label>
 					<select id="product_categories" name="product_categories[]" style="width: 50%;"  class="wc-enhanced-select" multiple="multiple" data-placeholder="<?php esc_attr_e( 'Any category', 'woocommerce' ); ?>">
 						<?php
 						$category_ids = $coupon->get_product_categories( 'edit' );
@@ -239,7 +239,7 @@ class WC_Meta_Box_Coupon_Data {
 							}
 						}
 						?>
-					</select> <?php echo wc_help_tip( __( 'Product categories that the coupon will be applied to, or that need to be in the cart in order for the "Fixed cart discount" to be applied.', 'woocommerce' ) ); ?>
+					</select> <?php echo wc_help_tip( __( 'Thư mục sản phẩm that the coupon will be applied to, or that need to be in the cart in order for the "Fixed cart discount" to be applied.', 'woocommerce' ) ); ?>
 				</p>
 
 				<?php // Exclude Categories. ?>
@@ -257,7 +257,7 @@ class WC_Meta_Box_Coupon_Data {
 						}
 						?>
 					</select>
-					<?php echo wc_help_tip( __( 'Product categories that the coupon will not be applied to, or that cannot be in the cart in order for the "Fixed cart discount" to be applied.', 'woocommerce' ) ); ?>
+					<?php echo wc_help_tip( __( 'Thư mục sản phẩm that the coupon will not be applied to, or that cannot be in the cart in order for the "Fixed cart discount" to be applied.', 'woocommerce' ) ); ?>
 				</p>
 			</div>
 			<div class="options_group">

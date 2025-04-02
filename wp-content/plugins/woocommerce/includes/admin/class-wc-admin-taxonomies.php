@@ -326,7 +326,7 @@ class WC_Admin_Taxonomies {
 	 */
 	public function product_cat_description() {
 		echo wp_kses(
-			wpautop( __( 'Product categories for your store can be managed here. To change the order of categories on the front-end you can drag and drop to sort them. To see more categories listed click the "screen options" link at the top-right of this page.', 'woocommerce' ) ),
+			wpautop( __( 'Thư mục sản phẩm for your store can be managed here. To change the order of categories on the front-end you can drag and drop to sort them. To see more categories listed click the "screen options" link at the top-right of this page.', 'woocommerce' ) ),
 			array( 'p' => array() )
 		);
 	}

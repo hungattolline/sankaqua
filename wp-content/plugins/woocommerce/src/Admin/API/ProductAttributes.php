@@ -10,7 +10,7 @@ namespace Automattic\WooCommerce\Admin\API;
 defined( 'ABSPATH' ) || exit;
 
 /**
- * Product categories controller.
+ * Thư mục sản phẩm controller.
  *
  * @internal
  * @extends WC_REST_Product_Attributes_Controller

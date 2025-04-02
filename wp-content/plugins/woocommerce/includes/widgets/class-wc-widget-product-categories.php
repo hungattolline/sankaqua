@@ -9,7 +9,7 @@
 defined( 'ABSPATH' ) || exit;
 
 /**
- * Product categories widget class.
+ * Thư mục sản phẩm widget class.
  *
  * @extends WC_Widget
  */
@@ -40,7 +40,7 @@ class WC_Widget_Product_Categories extends WC_Widget {
 		$this->settings           = array(
 			'title'              => array(
 				'type'  => 'text',
-				'std'   => __( 'Product categories', 'woocommerce' ),
+				'std'   => __( 'Thư mục sản phẩm', 'woocommerce' ),
 				'label' => __( 'Title', 'woocommerce' ),
 			),
 			'orderby'            => array(

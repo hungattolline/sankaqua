@@ -94,7 +94,7 @@ class WC_Post_Types {
 					'update_count_callback' => '_wc_term_recount',
 					'label'                 => __( 'Categories', 'woocommerce' ),
 					'labels'                => array(
-						'name'                  => __( 'Product categories', 'woocommerce' ),
+						'name'                  => __( 'Thư mục sản phẩm', 'woocommerce' ),
 						'singular_name'         => __( 'Category', 'woocommerce' ),
 						'menu_name'             => _x( 'Categories', 'Admin menu name', 'woocommerce' ),
 						'search_items'          => __( 'Search categories', 'woocommerce' ),
@@ -330,7 +330,7 @@ class WC_Post_Types {
 						'new_item'              => __( 'New product', 'woocommerce' ),
 						'view_item'             => __( 'View product', 'woocommerce' ),
 						'view_items'            => __( 'View products', 'woocommerce' ),
-						'search_items'          => __( 'Search products', 'woocommerce' ),
+						'search_items'          => __( 'Tìm kiếm sản phẩm', 'woocommerce' ),
 						'not_found'             => __( 'No products found', 'woocommerce' ),
 						'not_found_in_trash'    => __( 'No products found in trash', 'woocommerce' ),
 						'parent'                => __( 'Parent product', 'woocommerce' ),

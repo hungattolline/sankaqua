@@ -720,7 +720,7 @@ class WC_REST_Products_Controller extends WC_REST_Products_V2_Controller {
 			$product->set_cross_sell_ids( $crosssells );
 		}
 
-		// Product categories.
+		// Thư mục sản phẩm.
 		if ( isset( $request['categories'] ) && is_array( $request['categories'] ) ) {
 			$product = $this->save_taxonomy_terms( $product, $request['categories'] );
 		}
@@ -909,7 +909,7 @@ class WC_REST_Products_Controller extends WC_REST_Products_V2_Controller {
 					'context'     => array( 'view', 'edit' ),
 				),
 				'status'                => array(
-					'description' => __( 'Product status (post status).', 'woocommerce' ),
+					'description' => __( 'Trạng thái sản phẩm (post status).', 'woocommerce' ),
 					'type'        => 'string',
 					'default'     => 'publish',
 					'enum'        => array_merge( array_keys( get_post_statuses() ), array( 'future', 'auto-draft', 'trash' ) ),

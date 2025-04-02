@@ -1000,7 +1000,7 @@ if ( ! function_exists( 'woosq_init' ) ) {
                                             <td>
                                                 <ul>
                                                     <li>
-                                                        <label><input type="checkbox" name="woosq_settings[related_products][]" value="related" <?php echo esc_attr( in_array( 'related', $suggested ) ? 'checked' : '' ); ?>/> <?php esc_html_e( 'Related products', 'woo-smart-quick-view' ); ?>
+                                                        <label><input type="checkbox" name="woosq_settings[related_products][]" value="related" <?php echo esc_attr( in_array( 'related', $suggested ) ? 'checked' : '' ); ?>/> <?php esc_html_e( 'Sản phẩm liên quan', 'woo-smart-quick-view' ); ?>
                                                         </label></li>
                                                     <li>
                                                         <label><input type="checkbox" name="woosq_settings[related_products][]" value="up-sells" <?php echo esc_attr( in_array( 'up-sells', $suggested ) ? 'checked' : '' ); ?>/> <?php esc_html_e( 'Upsells products', 'woo-smart-quick-view' ); ?>

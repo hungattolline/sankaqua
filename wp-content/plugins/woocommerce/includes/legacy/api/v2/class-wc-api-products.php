@@ -345,7 +345,7 @@ class WC_API_Products extends WC_API_Resource {
 				$product->set_slug( wc_clean( $data['name'] ) );
 			}
 
-			// Product status.
+			// Trạng thái sản phẩm.
 			if ( isset( $data['status'] ) ) {
 				$product->set_status( wc_clean( $data['status'] ) );
 			}
@@ -1202,7 +1202,7 @@ class WC_API_Products extends WC_API_Resource {
 			}
 		}
 
-		// Product categories
+		// Thư mục sản phẩm
 		if ( isset( $data['categories'] ) && is_array( $data['categories'] ) ) {
 			$product->set_category_ids( $data['categories'] );
 		}

@@ -1,10 +1,12 @@
 <?php
 
-class Hnice_Merlin_Config {
+class Hnice_Merlin_Config
+{
 
     private $wizard;
 
-    public function __construct() {
+    public function __construct()
+    {
         $this->init();
         add_filter('merlin_import_files', [$this, 'import_files']);
         add_action('merlin_after_all_import', [$this, 'after_import_setup'], 10, 1);
@@ -19,7 +21,8 @@ class Hnice_Merlin_Config {
         });
     }
 
-    public function fiximport_elementor($post_meta) {
+    public function fiximport_elementor($post_meta)
+    {
         if ('_elementor_data' === $post_meta['key']) {
             $post_meta['value'] = wp_slash($post_meta['value']);
         }
@@ -27,8 +30,9 @@ class Hnice_Merlin_Config {
         return $post_meta;
     }
 
-    public function import_files(){
-            return array(
+    public function import_files()
+    {
+        return array(
             array(
                 'import_file_name'           => 'home 1',
                 'home'                       => 'home-1',
@@ -40,7 +44,7 @@ class Hnice_Merlin_Config {
                 'import_lookbook_revslider_file_url' => [],
                 'import_preview_image_url'   => get_theme_file_uri('/assets/images/oneclick/home-1.jpg'),
                 'preview_url'                => 'https://demo2.themelexus.com/hnice/home-1',
-                'elementor'                  => '{"system_colors":[{"_id":"primary","title":"Primary","color":"#E6AF5D"},{"_id":"secondary","title":"Secondary(Heading)","color":"#332F2C"},{"_id":"text","title":"Text","color":"#8D9396"},{"_id":"accent","title":"Accent","color":"#332F2C"},{"_id":"lighter","title":"Lighter","color":"#8D9396"},{"_id":"dark","title":"Dark","color":"#000000"},{"_id":"border","title":"Border","color":"#EAEAEA"}],"custom_colors":[],"system_typography":[{"_id":"primary","title":"Primary","typography_typography":"custom","typography_font_family":"Marcellus","typography_font_weight":"400"},{"_id":"secondary","title":"Secondary(Heading)","typography_typography":"custom","typography_font_family":"Marcellus","typography_font_weight":"400"},{"_id":"text","title":"Text","typography_typography":"custom","typography_font_family":"Hnice","typography_font_weight":"400"},{"_id":"accent","title":"Accent","typography_typography":"custom","typography_font_family":"Hnice","typography_font_weight":"700"},{"_id":"special","title":"Special","typography_typography":"custom"}],"custom_typography":[],"default_generic_fonts":"Sans-serif","site_name":"Hnice","site_description":"Modern Funiture WooCommerce Theme","page_title_selector":"h1.entry-title","activeItemIndex":1,"active_breakpoints":["viewport_mobile","viewport_mobile_extra","viewport_tablet","viewport_tablet_extra","viewport_laptop"],"viewport_md":768,"viewport_lg":1025,"container_width":{"unit":"px","size":1410,"sizes":[]},"space_between_widgets":{"unit":"px","size":0,"sizes":[]},"body_background_background":"classic","body_background_color":"#fff"}',
+                'elementor'                  => '{"system_colors":[{"_id":"primary","title":"Primary","color":"#00baee"},{"_id":"secondary","title":"Secondary(Heading)","color":"#332F2C"},{"_id":"text","title":"Text","color":"#8D9396"},{"_id":"accent","title":"Accent","color":"#332F2C"},{"_id":"lighter","title":"Lighter","color":"#8D9396"},{"_id":"dark","title":"Dark","color":"#000000"},{"_id":"border","title":"Border","color":"#EAEAEA"}],"custom_colors":[],"system_typography":[{"_id":"primary","title":"Primary","typography_typography":"custom","typography_font_family":"Marcellus","typography_font_weight":"400"},{"_id":"secondary","title":"Secondary(Heading)","typography_typography":"custom","typography_font_family":"Marcellus","typography_font_weight":"400"},{"_id":"text","title":"Text","typography_typography":"custom","typography_font_family":"Hnice","typography_font_weight":"400"},{"_id":"accent","title":"Accent","typography_typography":"custom","typography_font_family":"Hnice","typography_font_weight":"700"},{"_id":"special","title":"Special","typography_typography":"custom"}],"custom_typography":[],"default_generic_fonts":"Sans-serif","site_name":"Hnice","site_description":"Modern Funiture WooCommerce Theme","page_title_selector":"h1.entry-title","activeItemIndex":1,"active_breakpoints":["viewport_mobile","viewport_mobile_extra","viewport_tablet","viewport_tablet_extra","viewport_laptop"],"viewport_md":768,"viewport_lg":1025,"container_width":{"unit":"px","size":1410,"sizes":[]},"space_between_widgets":{"unit":"px","size":0,"sizes":[]},"body_background_background":"classic","body_background_color":"#fff"}',
                 'themeoptions'               => '{}',
             ),
 
@@ -55,7 +59,7 @@ class Hnice_Merlin_Config {
                 'import_lookbook_revslider_file_url' => [],
                 'import_preview_image_url'   => get_theme_file_uri('/assets/images/oneclick/home-2.jpg'),
                 'preview_url'                => 'https://demo2.themelexus.com/hnice/home-2',
-                'elementor'                  => '{"system_colors":[{"_id":"primary","title":"Primary","color":"#E6AF5D"},{"_id":"secondary","title":"Secondary(Heading)","color":"#332F2C"},{"_id":"text","title":"Text","color":"#8D9396"},{"_id":"accent","title":"Accent","color":"#332F2C"},{"_id":"lighter","title":"Lighter","color":"#8D9396"},{"_id":"dark","title":"Dark","color":"#000000"},{"_id":"border","title":"Border","color":"#EAEAEA"}],"custom_colors":[],"system_typography":[{"_id":"primary","title":"Primary","typography_typography":"custom","typography_font_family":"Marcellus","typography_font_weight":"400"},{"_id":"secondary","title":"Secondary(Heading)","typography_typography":"custom","typography_font_family":"Marcellus","typography_font_weight":"400"},{"_id":"text","title":"Text","typography_typography":"custom","typography_font_family":"Hnice","typography_font_weight":"400"},{"_id":"accent","title":"Accent","typography_typography":"custom","typography_font_family":"Hnice","typography_font_weight":"700"},{"_id":"special","title":"Special","typography_typography":"custom"}],"custom_typography":[],"default_generic_fonts":"Sans-serif","site_name":"Hnice","site_description":"Modern Funiture WooCommerce Theme","page_title_selector":"h1.entry-title","activeItemIndex":1,"active_breakpoints":["viewport_mobile","viewport_mobile_extra","viewport_tablet","viewport_tablet_extra","viewport_laptop"],"viewport_md":768,"viewport_lg":1025,"container_width":{"unit":"px","size":1410,"sizes":[]},"space_between_widgets":{"unit":"px","size":0,"sizes":[]},"body_background_background":"classic","body_background_color":"#fff"}',
+                'elementor'                  => '{"system_colors":[{"_id":"primary","title":"Primary","color":"#00baee"},{"_id":"secondary","title":"Secondary(Heading)","color":"#332F2C"},{"_id":"text","title":"Text","color":"#8D9396"},{"_id":"accent","title":"Accent","color":"#332F2C"},{"_id":"lighter","title":"Lighter","color":"#8D9396"},{"_id":"dark","title":"Dark","color":"#000000"},{"_id":"border","title":"Border","color":"#EAEAEA"}],"custom_colors":[],"system_typography":[{"_id":"primary","title":"Primary","typography_typography":"custom","typography_font_family":"Marcellus","typography_font_weight":"400"},{"_id":"secondary","title":"Secondary(Heading)","typography_typography":"custom","typography_font_family":"Marcellus","typography_font_weight":"400"},{"_id":"text","title":"Text","typography_typography":"custom","typography_font_family":"Hnice","typography_font_weight":"400"},{"_id":"accent","title":"Accent","typography_typography":"custom","typography_font_family":"Hnice","typography_font_weight":"700"},{"_id":"special","title":"Special","typography_typography":"custom"}],"custom_typography":[],"default_generic_fonts":"Sans-serif","site_name":"Hnice","site_description":"Modern Funiture WooCommerce Theme","page_title_selector":"h1.entry-title","activeItemIndex":1,"active_breakpoints":["viewport_mobile","viewport_mobile_extra","viewport_tablet","viewport_tablet_extra","viewport_laptop"],"viewport_md":768,"viewport_lg":1025,"container_width":{"unit":"px","size":1410,"sizes":[]},"space_between_widgets":{"unit":"px","size":0,"sizes":[]},"body_background_background":"classic","body_background_color":"#fff"}',
                 'themeoptions'               => '{}',
             ),
 
@@ -70,7 +74,7 @@ class Hnice_Merlin_Config {
                 'import_lookbook_revslider_file_url' => [],
                 'import_preview_image_url'   => get_theme_file_uri('/assets/images/oneclick/home-3.jpg'),
                 'preview_url'                => 'https://demo2.themelexus.com/hnice/home-3',
-                'elementor'                  => '{"system_colors":[{"_id":"primary","title":"Primary","color":"#E6AF5D"},{"_id":"secondary","title":"Secondary(Heading)","color":"#332F2C"},{"_id":"text","title":"Text","color":"#8D9396"},{"_id":"accent","title":"Accent","color":"#332F2C"},{"_id":"lighter","title":"Lighter","color":"#8D9396"},{"_id":"dark","title":"Dark","color":"#000000"},{"_id":"border","title":"Border","color":"#EAEAEA"}],"custom_colors":[],"system_typography":[{"_id":"primary","title":"Primary","typography_typography":"custom","typography_font_family":"Marcellus","typography_font_weight":"400"},{"_id":"secondary","title":"Secondary(Heading)","typography_typography":"custom","typography_font_family":"Marcellus","typography_font_weight":"400"},{"_id":"text","title":"Text","typography_typography":"custom","typography_font_family":"Hnice","typography_font_weight":"400"},{"_id":"accent","title":"Accent","typography_typography":"custom","typography_font_family":"Hnice","typography_font_weight":"700"},{"_id":"special","title":"Special","typography_typography":"custom"}],"custom_typography":[],"default_generic_fonts":"Sans-serif","site_name":"Hnice","site_description":"Modern Funiture WooCommerce Theme","page_title_selector":"h1.entry-title","activeItemIndex":1,"active_breakpoints":["viewport_mobile","viewport_mobile_extra","viewport_tablet","viewport_tablet_extra","viewport_laptop"],"viewport_md":768,"viewport_lg":1025,"container_width":{"unit":"px","size":1410,"sizes":[]},"space_between_widgets":{"unit":"px","size":0,"sizes":[]},"body_background_background":"classic","body_background_color":"#fff"}',
+                'elementor'                  => '{"system_colors":[{"_id":"primary","title":"Primary","color":"#00baee"},{"_id":"secondary","title":"Secondary(Heading)","color":"#332F2C"},{"_id":"text","title":"Text","color":"#8D9396"},{"_id":"accent","title":"Accent","color":"#332F2C"},{"_id":"lighter","title":"Lighter","color":"#8D9396"},{"_id":"dark","title":"Dark","color":"#000000"},{"_id":"border","title":"Border","color":"#EAEAEA"}],"custom_colors":[],"system_typography":[{"_id":"primary","title":"Primary","typography_typography":"custom","typography_font_family":"Marcellus","typography_font_weight":"400"},{"_id":"secondary","title":"Secondary(Heading)","typography_typography":"custom","typography_font_family":"Marcellus","typography_font_weight":"400"},{"_id":"text","title":"Text","typography_typography":"custom","typography_font_family":"Hnice","typography_font_weight":"400"},{"_id":"accent","title":"Accent","typography_typography":"custom","typography_font_family":"Hnice","typography_font_weight":"700"},{"_id":"special","title":"Special","typography_typography":"custom"}],"custom_typography":[],"default_generic_fonts":"Sans-serif","site_name":"Hnice","site_description":"Modern Funiture WooCommerce Theme","page_title_selector":"h1.entry-title","activeItemIndex":1,"active_breakpoints":["viewport_mobile","viewport_mobile_extra","viewport_tablet","viewport_tablet_extra","viewport_laptop"],"viewport_md":768,"viewport_lg":1025,"container_width":{"unit":"px","size":1410,"sizes":[]},"space_between_widgets":{"unit":"px","size":0,"sizes":[]},"body_background_background":"classic","body_background_color":"#fff"}',
                 'themeoptions'               => '{}',
             ),
 
@@ -85,7 +89,7 @@ class Hnice_Merlin_Config {
                 'import_lookbook_revslider_file_url' => [],
                 'import_preview_image_url'   => get_theme_file_uri('/assets/images/oneclick/home-4.jpg'),
                 'preview_url'                => 'https://demo2.themelexus.com/hnice/home-4',
-                'elementor'                  => '{"system_colors":[{"_id":"primary","title":"Primary","color":"#E6AF5D"},{"_id":"secondary","title":"Secondary(Heading)","color":"#332F2C"},{"_id":"text","title":"Text","color":"#8D9396"},{"_id":"accent","title":"Accent","color":"#332F2C"},{"_id":"lighter","title":"Lighter","color":"#8D9396"},{"_id":"dark","title":"Dark","color":"#000000"},{"_id":"border","title":"Border","color":"#EAEAEA"}],"custom_colors":[],"system_typography":[{"_id":"primary","title":"Primary","typography_typography":"custom","typography_font_family":"Marcellus","typography_font_weight":"400"},{"_id":"secondary","title":"Secondary(Heading)","typography_typography":"custom","typography_font_family":"Marcellus","typography_font_weight":"400"},{"_id":"text","title":"Text","typography_typography":"custom","typography_font_family":"Hnice","typography_font_weight":"400"},{"_id":"accent","title":"Accent","typography_typography":"custom","typography_font_family":"Hnice","typography_font_weight":"700"},{"_id":"special","title":"Special","typography_typography":"custom"}],"custom_typography":[],"default_generic_fonts":"Sans-serif","site_name":"Hnice","site_description":"Modern Funiture WooCommerce Theme","page_title_selector":"h1.entry-title","activeItemIndex":1,"active_breakpoints":["viewport_mobile","viewport_mobile_extra","viewport_tablet","viewport_tablet_extra","viewport_laptop"],"viewport_md":768,"viewport_lg":1025,"container_width":{"unit":"px","size":1410,"sizes":[]},"space_between_widgets":{"unit":"px","size":0,"sizes":[]},"body_background_background":"classic","body_background_color":"#fff"}',
+                'elementor'                  => '{"system_colors":[{"_id":"primary","title":"Primary","color":"#00baee"},{"_id":"secondary","title":"Secondary(Heading)","color":"#332F2C"},{"_id":"text","title":"Text","color":"#8D9396"},{"_id":"accent","title":"Accent","color":"#332F2C"},{"_id":"lighter","title":"Lighter","color":"#8D9396"},{"_id":"dark","title":"Dark","color":"#000000"},{"_id":"border","title":"Border","color":"#EAEAEA"}],"custom_colors":[],"system_typography":[{"_id":"primary","title":"Primary","typography_typography":"custom","typography_font_family":"Marcellus","typography_font_weight":"400"},{"_id":"secondary","title":"Secondary(Heading)","typography_typography":"custom","typography_font_family":"Marcellus","typography_font_weight":"400"},{"_id":"text","title":"Text","typography_typography":"custom","typography_font_family":"Hnice","typography_font_weight":"400"},{"_id":"accent","title":"Accent","typography_typography":"custom","typography_font_family":"Hnice","typography_font_weight":"700"},{"_id":"special","title":"Special","typography_typography":"custom"}],"custom_typography":[],"default_generic_fonts":"Sans-serif","site_name":"Hnice","site_description":"Modern Funiture WooCommerce Theme","page_title_selector":"h1.entry-title","activeItemIndex":1,"active_breakpoints":["viewport_mobile","viewport_mobile_extra","viewport_tablet","viewport_tablet_extra","viewport_laptop"],"viewport_md":768,"viewport_lg":1025,"container_width":{"unit":"px","size":1410,"sizes":[]},"space_between_widgets":{"unit":"px","size":0,"sizes":[]},"body_background_background":"classic","body_background_color":"#fff"}',
                 'themeoptions'               => '{}',
             ),
 
@@ -100,7 +104,7 @@ class Hnice_Merlin_Config {
                 'import_lookbook_revslider_file_url' => [],
                 'import_preview_image_url'   => get_theme_file_uri('/assets/images/oneclick/home-5.jpg'),
                 'preview_url'                => 'https://demo2.themelexus.com/hnice/home-5',
-                'elementor'                  => '{"system_colors":[{"_id":"primary","title":"Primary","color":"#E6AF5D"},{"_id":"secondary","title":"Secondary(Heading)","color":"#332F2C"},{"_id":"text","title":"Text","color":"#8D9396"},{"_id":"accent","title":"Accent","color":"#332F2C"},{"_id":"lighter","title":"Lighter","color":"#8D9396"},{"_id":"dark","title":"Dark","color":"#000000"},{"_id":"border","title":"Border","color":"#EAEAEA"}],"custom_colors":[],"system_typography":[{"_id":"primary","title":"Primary","typography_typography":"custom","typography_font_family":"Marcellus","typography_font_weight":"400"},{"_id":"secondary","title":"Secondary(Heading)","typography_typography":"custom","typography_font_family":"Marcellus","typography_font_weight":"400"},{"_id":"text","title":"Text","typography_typography":"custom","typography_font_family":"Hnice","typography_font_weight":"400"},{"_id":"accent","title":"Accent","typography_typography":"custom","typography_font_family":"Hnice","typography_font_weight":"700"},{"_id":"special","title":"Special","typography_typography":"custom"}],"custom_typography":[],"default_generic_fonts":"Sans-serif","site_name":"Hnice","site_description":"Modern Funiture WooCommerce Theme","page_title_selector":"h1.entry-title","activeItemIndex":1,"active_breakpoints":["viewport_mobile","viewport_mobile_extra","viewport_tablet","viewport_tablet_extra","viewport_laptop"],"viewport_md":768,"viewport_lg":1025,"container_width":{"unit":"px","size":1410,"sizes":[]},"space_between_widgets":{"unit":"px","size":0,"sizes":[]},"body_background_background":"classic","body_background_color":"#fff"}',
+                'elementor'                  => '{"system_colors":[{"_id":"primary","title":"Primary","color":"#00baee"},{"_id":"secondary","title":"Secondary(Heading)","color":"#332F2C"},{"_id":"text","title":"Text","color":"#8D9396"},{"_id":"accent","title":"Accent","color":"#332F2C"},{"_id":"lighter","title":"Lighter","color":"#8D9396"},{"_id":"dark","title":"Dark","color":"#000000"},{"_id":"border","title":"Border","color":"#EAEAEA"}],"custom_colors":[],"system_typography":[{"_id":"primary","title":"Primary","typography_typography":"custom","typography_font_family":"Marcellus","typography_font_weight":"400"},{"_id":"secondary","title":"Secondary(Heading)","typography_typography":"custom","typography_font_family":"Marcellus","typography_font_weight":"400"},{"_id":"text","title":"Text","typography_typography":"custom","typography_font_family":"Hnice","typography_font_weight":"400"},{"_id":"accent","title":"Accent","typography_typography":"custom","typography_font_family":"Hnice","typography_font_weight":"700"},{"_id":"special","title":"Special","typography_typography":"custom"}],"custom_typography":[],"default_generic_fonts":"Sans-serif","site_name":"Hnice","site_description":"Modern Funiture WooCommerce Theme","page_title_selector":"h1.entry-title","activeItemIndex":1,"active_breakpoints":["viewport_mobile","viewport_mobile_extra","viewport_tablet","viewport_tablet_extra","viewport_laptop"],"viewport_md":768,"viewport_lg":1025,"container_width":{"unit":"px","size":1410,"sizes":[]},"space_between_widgets":{"unit":"px","size":0,"sizes":[]},"body_background_background":"classic","body_background_color":"#fff"}',
                 'themeoptions'               => '{}',
             ),
 
@@ -115,7 +119,7 @@ class Hnice_Merlin_Config {
                 'import_lookbook_revslider_file_url' => [],
                 'import_preview_image_url'   => get_theme_file_uri('/assets/images/oneclick/home-6.jpg'),
                 'preview_url'                => 'https://demo2.themelexus.com/hnice/home-6',
-                'elementor'                  => '{"system_colors":[{"_id":"primary","title":"Primary","color":"#E6AF5D"},{"_id":"secondary","title":"Secondary(Heading)","color":"#332F2C"},{"_id":"text","title":"Text","color":"#8D9396"},{"_id":"accent","title":"Accent","color":"#332F2C"},{"_id":"lighter","title":"Lighter","color":"#8D9396"},{"_id":"dark","title":"Dark","color":"#000000"},{"_id":"border","title":"Border","color":"#EAEAEA"}],"custom_colors":[],"system_typography":[{"_id":"primary","title":"Primary","typography_typography":"custom","typography_font_family":"Marcellus","typography_font_weight":"400"},{"_id":"secondary","title":"Secondary(Heading)","typography_typography":"custom","typography_font_family":"Marcellus","typography_font_weight":"400"},{"_id":"text","title":"Text","typography_typography":"custom","typography_font_family":"Hnice","typography_font_weight":"400"},{"_id":"accent","title":"Accent","typography_typography":"custom","typography_font_family":"Hnice","typography_font_weight":"700"},{"_id":"special","title":"Special","typography_typography":"custom"}],"custom_typography":[],"default_generic_fonts":"Sans-serif","site_name":"Hnice","site_description":"Modern Funiture WooCommerce Theme","page_title_selector":"h1.entry-title","activeItemIndex":1,"active_breakpoints":["viewport_mobile","viewport_mobile_extra","viewport_tablet","viewport_tablet_extra","viewport_laptop"],"viewport_md":768,"viewport_lg":1025,"container_width":{"unit":"px","size":1410,"sizes":[]},"space_between_widgets":{"unit":"px","size":0,"sizes":[]},"body_background_background":"classic","body_background_color":"#fff"}',
+                'elementor'                  => '{"system_colors":[{"_id":"primary","title":"Primary","color":"#00baee"},{"_id":"secondary","title":"Secondary(Heading)","color":"#332F2C"},{"_id":"text","title":"Text","color":"#8D9396"},{"_id":"accent","title":"Accent","color":"#332F2C"},{"_id":"lighter","title":"Lighter","color":"#8D9396"},{"_id":"dark","title":"Dark","color":"#000000"},{"_id":"border","title":"Border","color":"#EAEAEA"}],"custom_colors":[],"system_typography":[{"_id":"primary","title":"Primary","typography_typography":"custom","typography_font_family":"Marcellus","typography_font_weight":"400"},{"_id":"secondary","title":"Secondary(Heading)","typography_typography":"custom","typography_font_family":"Marcellus","typography_font_weight":"400"},{"_id":"text","title":"Text","typography_typography":"custom","typography_font_family":"Hnice","typography_font_weight":"400"},{"_id":"accent","title":"Accent","typography_typography":"custom","typography_font_family":"Hnice","typography_font_weight":"700"},{"_id":"special","title":"Special","typography_typography":"custom"}],"custom_typography":[],"default_generic_fonts":"Sans-serif","site_name":"Hnice","site_description":"Modern Funiture WooCommerce Theme","page_title_selector":"h1.entry-title","activeItemIndex":1,"active_breakpoints":["viewport_mobile","viewport_mobile_extra","viewport_tablet","viewport_tablet_extra","viewport_laptop"],"viewport_md":768,"viewport_lg":1025,"container_width":{"unit":"px","size":1410,"sizes":[]},"space_between_widgets":{"unit":"px","size":0,"sizes":[]},"body_background_background":"classic","body_background_color":"#fff"}',
                 'themeoptions'               => '{}',
             ),
 
@@ -130,7 +134,7 @@ class Hnice_Merlin_Config {
                 'import_lookbook_revslider_file_url' => [],
                 'import_preview_image_url'   => get_theme_file_uri('/assets/images/oneclick/home-7.jpg'),
                 'preview_url'                => 'https://demo2.themelexus.com/hnice/home-7',
-                'elementor'                  => '{"system_colors":[{"_id":"primary","title":"Primary","color":"#E6AF5D"},{"_id":"secondary","title":"Secondary(Heading)","color":"#332F2C"},{"_id":"text","title":"Text","color":"#8D9396"},{"_id":"accent","title":"Accent","color":"#332F2C"},{"_id":"lighter","title":"Lighter","color":"#8D9396"},{"_id":"dark","title":"Dark","color":"#000000"},{"_id":"border","title":"Border","color":"#EAEAEA"}],"custom_colors":[],"system_typography":[{"_id":"primary","title":"Primary","typography_typography":"custom","typography_font_family":"Marcellus","typography_font_weight":"400"},{"_id":"secondary","title":"Secondary(Heading)","typography_typography":"custom","typography_font_family":"Marcellus","typography_font_weight":"400"},{"_id":"text","title":"Text","typography_typography":"custom","typography_font_family":"Hnice","typography_font_weight":"400"},{"_id":"accent","title":"Accent","typography_typography":"custom","typography_font_family":"Hnice","typography_font_weight":"700"},{"_id":"special","title":"Special","typography_typography":"custom"}],"custom_typography":[],"default_generic_fonts":"Sans-serif","site_name":"Hnice","site_description":"Modern Funiture WooCommerce Theme","page_title_selector":"h1.entry-title","activeItemIndex":1,"active_breakpoints":["viewport_mobile","viewport_mobile_extra","viewport_tablet","viewport_tablet_extra","viewport_laptop"],"viewport_md":768,"viewport_lg":1025,"container_width":{"unit":"px","size":1410,"sizes":[]},"space_between_widgets":{"unit":"px","size":0,"sizes":[]},"body_background_background":"classic","body_background_color":"#fff"}',
+                'elementor'                  => '{"system_colors":[{"_id":"primary","title":"Primary","color":"#00baee"},{"_id":"secondary","title":"Secondary(Heading)","color":"#332F2C"},{"_id":"text","title":"Text","color":"#8D9396"},{"_id":"accent","title":"Accent","color":"#332F2C"},{"_id":"lighter","title":"Lighter","color":"#8D9396"},{"_id":"dark","title":"Dark","color":"#000000"},{"_id":"border","title":"Border","color":"#EAEAEA"}],"custom_colors":[],"system_typography":[{"_id":"primary","title":"Primary","typography_typography":"custom","typography_font_family":"Marcellus","typography_font_weight":"400"},{"_id":"secondary","title":"Secondary(Heading)","typography_typography":"custom","typography_font_family":"Marcellus","typography_font_weight":"400"},{"_id":"text","title":"Text","typography_typography":"custom","typography_font_family":"Hnice","typography_font_weight":"400"},{"_id":"accent","title":"Accent","typography_typography":"custom","typography_font_family":"Hnice","typography_font_weight":"700"},{"_id":"special","title":"Special","typography_typography":"custom"}],"custom_typography":[],"default_generic_fonts":"Sans-serif","site_name":"Hnice","site_description":"Modern Funiture WooCommerce Theme","page_title_selector":"h1.entry-title","activeItemIndex":1,"active_breakpoints":["viewport_mobile","viewport_mobile_extra","viewport_tablet","viewport_tablet_extra","viewport_laptop"],"viewport_md":768,"viewport_lg":1025,"container_width":{"unit":"px","size":1410,"sizes":[]},"space_between_widgets":{"unit":"px","size":0,"sizes":[]},"body_background_background":"classic","body_background_color":"#fff"}',
                 'themeoptions'               => '{}',
             ),
 
@@ -145,7 +149,7 @@ class Hnice_Merlin_Config {
                 'import_lookbook_revslider_file_url' => [],
                 'import_preview_image_url'   => get_theme_file_uri('/assets/images/oneclick/home-8.jpg'),
                 'preview_url'                => 'https://demo2.themelexus.com/hnice/home-8',
-                'elementor'                  => '{"system_colors":[{"_id":"primary","title":"Primary","color":"#E6AF5D"},{"_id":"secondary","title":"Secondary(Heading)","color":"#332F2C"},{"_id":"text","title":"Text","color":"#8D9396"},{"_id":"accent","title":"Accent","color":"#332F2C"},{"_id":"lighter","title":"Lighter","color":"#8D9396"},{"_id":"dark","title":"Dark","color":"#000000"},{"_id":"border","title":"Border","color":"#EAEAEA"}],"custom_colors":[],"system_typography":[{"_id":"primary","title":"Primary","typography_typography":"custom","typography_font_family":"Marcellus","typography_font_weight":"400"},{"_id":"secondary","title":"Secondary(Heading)","typography_typography":"custom","typography_font_family":"Marcellus","typography_font_weight":"400"},{"_id":"text","title":"Text","typography_typography":"custom","typography_font_family":"Hnice","typography_font_weight":"400"},{"_id":"accent","title":"Accent","typography_typography":"custom","typography_font_family":"Hnice","typography_font_weight":"700"},{"_id":"special","title":"Special","typography_typography":"custom"}],"custom_typography":[],"default_generic_fonts":"Sans-serif","site_name":"Hnice","site_description":"Modern Funiture WooCommerce Theme","page_title_selector":"h1.entry-title","activeItemIndex":1,"active_breakpoints":["viewport_mobile","viewport_mobile_extra","viewport_tablet","viewport_tablet_extra","viewport_laptop"],"viewport_md":768,"viewport_lg":1025,"container_width":{"unit":"px","size":1410,"sizes":[]},"space_between_widgets":{"unit":"px","size":0,"sizes":[]},"body_background_background":"classic","body_background_color":"#fff"}',
+                'elementor'                  => '{"system_colors":[{"_id":"primary","title":"Primary","color":"#00baee"},{"_id":"secondary","title":"Secondary(Heading)","color":"#332F2C"},{"_id":"text","title":"Text","color":"#8D9396"},{"_id":"accent","title":"Accent","color":"#332F2C"},{"_id":"lighter","title":"Lighter","color":"#8D9396"},{"_id":"dark","title":"Dark","color":"#000000"},{"_id":"border","title":"Border","color":"#EAEAEA"}],"custom_colors":[],"system_typography":[{"_id":"primary","title":"Primary","typography_typography":"custom","typography_font_family":"Marcellus","typography_font_weight":"400"},{"_id":"secondary","title":"Secondary(Heading)","typography_typography":"custom","typography_font_family":"Marcellus","typography_font_weight":"400"},{"_id":"text","title":"Text","typography_typography":"custom","typography_font_family":"Hnice","typography_font_weight":"400"},{"_id":"accent","title":"Accent","typography_typography":"custom","typography_font_family":"Hnice","typography_font_weight":"700"},{"_id":"special","title":"Special","typography_typography":"custom"}],"custom_typography":[],"default_generic_fonts":"Sans-serif","site_name":"Hnice","site_description":"Modern Funiture WooCommerce Theme","page_title_selector":"h1.entry-title","activeItemIndex":1,"active_breakpoints":["viewport_mobile","viewport_mobile_extra","viewport_tablet","viewport_tablet_extra","viewport_laptop"],"viewport_md":768,"viewport_lg":1025,"container_width":{"unit":"px","size":1410,"sizes":[]},"space_between_widgets":{"unit":"px","size":0,"sizes":[]},"body_background_background":"classic","body_background_color":"#fff"}',
                 'themeoptions'               => '{}',
             ),
 
@@ -160,13 +164,14 @@ class Hnice_Merlin_Config {
                 'import_lookbook_revslider_file_url' => [],
                 'import_preview_image_url'   => get_theme_file_uri('/assets/images/oneclick/home-9.jpg'),
                 'preview_url'                => 'https://demo2.themelexus.com/hnice/home-9',
-                'elementor'                  => '{"system_colors":[{"_id":"primary","title":"Primary","color":"#E6AF5D"},{"_id":"secondary","title":"Secondary(Heading)","color":"#332F2C"},{"_id":"text","title":"Text","color":"#8D9396"},{"_id":"accent","title":"Accent","color":"#332F2C"},{"_id":"lighter","title":"Lighter","color":"#8D9396"},{"_id":"dark","title":"Dark","color":"#000000"},{"_id":"border","title":"Border","color":"#EAEAEA"}],"custom_colors":[],"system_typography":[{"_id":"primary","title":"Primary","typography_typography":"custom","typography_font_family":"Marcellus","typography_font_weight":"400"},{"_id":"secondary","title":"Secondary(Heading)","typography_typography":"custom","typography_font_family":"Marcellus","typography_font_weight":"400"},{"_id":"text","title":"Text","typography_typography":"custom","typography_font_family":"Hnice","typography_font_weight":"400"},{"_id":"accent","title":"Accent","typography_typography":"custom","typography_font_family":"Hnice","typography_font_weight":"700"},{"_id":"special","title":"Special","typography_typography":"custom"}],"custom_typography":[],"default_generic_fonts":"Sans-serif","site_name":"Hnice","site_description":"Modern Funiture WooCommerce Theme","page_title_selector":"h1.entry-title","activeItemIndex":1,"active_breakpoints":["viewport_mobile","viewport_mobile_extra","viewport_tablet","viewport_tablet_extra","viewport_laptop"],"viewport_md":768,"viewport_lg":1025,"container_width":{"unit":"px","size":1410,"sizes":[]},"space_between_widgets":{"unit":"px","size":0,"sizes":[]},"body_background_background":"classic","body_background_color":"#fff"}',
+                'elementor'                  => '{"system_colors":[{"_id":"primary","title":"Primary","color":"#00baee"},{"_id":"secondary","title":"Secondary(Heading)","color":"#332F2C"},{"_id":"text","title":"Text","color":"#8D9396"},{"_id":"accent","title":"Accent","color":"#332F2C"},{"_id":"lighter","title":"Lighter","color":"#8D9396"},{"_id":"dark","title":"Dark","color":"#000000"},{"_id":"border","title":"Border","color":"#EAEAEA"}],"custom_colors":[],"system_typography":[{"_id":"primary","title":"Primary","typography_typography":"custom","typography_font_family":"Marcellus","typography_font_weight":"400"},{"_id":"secondary","title":"Secondary(Heading)","typography_typography":"custom","typography_font_family":"Marcellus","typography_font_weight":"400"},{"_id":"text","title":"Text","typography_typography":"custom","typography_font_family":"Hnice","typography_font_weight":"400"},{"_id":"accent","title":"Accent","typography_typography":"custom","typography_font_family":"Hnice","typography_font_weight":"700"},{"_id":"special","title":"Special","typography_typography":"custom"}],"custom_typography":[],"default_generic_fonts":"Sans-serif","site_name":"Hnice","site_description":"Modern Funiture WooCommerce Theme","page_title_selector":"h1.entry-title","activeItemIndex":1,"active_breakpoints":["viewport_mobile","viewport_mobile_extra","viewport_tablet","viewport_tablet_extra","viewport_laptop"],"viewport_md":768,"viewport_lg":1025,"container_width":{"unit":"px","size":1410,"sizes":[]},"space_between_widgets":{"unit":"px","size":0,"sizes":[]},"body_background_background":"classic","body_background_color":"#fff"}',
                 'themeoptions'               => '{}',
             ),
-            );           
-        }
+        );
+    }
 
-    public function after_import_setup($selected_import) {
+    public function after_import_setup($selected_import)
+    {
         $selected_import = ($this->import_files())[$selected_import];
         $check_oneclick  = get_option('hnice_check_oneclick', []);
         $home = get_page_by_path($selected_import['home']);
@@ -203,7 +208,8 @@ class Hnice_Merlin_Config {
 
 
     //remove quick_table_enable
-    private function remove_quick_table_enable() {
+    private function remove_quick_table_enable()
+    {
         $qte = get_option('woosc_settings');
         if ($qte['quick_table_enable'] == 'yes') {
             $qte['quick_table_enable'] = 'no';
@@ -211,7 +217,8 @@ class Hnice_Merlin_Config {
         }
     }
 
-    private function update_nav_menu_item() {
+    private function update_nav_menu_item()
+    {
         $params = array(
             'posts_per_page' => -1,
             'post_type'      => [
@@ -226,10 +233,10 @@ class Hnice_Merlin_Config {
                 'post_title' => get_the_title()
             ));
         endwhile;
-
     }
 
-    private function get_mailchimp_id() {
+    private function get_mailchimp_id()
+    {
         $params = array(
             'post_type'      => 'mc4wp-form',
             'posts_per_page' => 1,
@@ -239,7 +246,8 @@ class Hnice_Merlin_Config {
         return isset($post[0]) ? $post[0]->ID : 0;
     }
 
-    private function get_attachment($key) {
+    private function get_attachment($key)
+    {
         $params = array(
             'post_type'      => 'attachment',
             'post_status'    => 'inherit',
@@ -254,7 +262,8 @@ class Hnice_Merlin_Config {
         return 0;
     }
 
-    private function init() {
+    private function init()
+    {
         $this->wizard = new Merlin(
             $config = array(
                 // Location / directory where Merlin WP is placed in your theme.
@@ -353,13 +362,15 @@ class Hnice_Merlin_Config {
         }
     }
 
-    public function widget_monster() {
+    public function widget_monster()
+    {
         unregister_widget('Monster_Widget');
         require_once get_parent_theme_file_path('/inc/merlin/includes/monster-widget.php');
         register_widget('Hnice_Monster_Widget');
     }
 
-    public function widgets_init() {
+    public function widgets_init()
+    {
         require_once get_parent_theme_file_path('/inc/merlin/includes/recent-post.php');
         register_widget('Hnice_WP_Widget_Recent_Posts');
         if (hnice_is_woocommerce_activated()) {
@@ -368,7 +379,8 @@ class Hnice_Merlin_Config {
         }
     }
 
-    private function get_all_header_footer() {
+    private function get_all_header_footer()
+    {
         return [
             'home-1' => [
                 'header' => [
@@ -554,7 +566,8 @@ class Hnice_Merlin_Config {
         ];
     }
 
-    private function reset_header_footer() {
+    private function reset_header_footer()
+    {
         $footer_args = array(
             'post_type'      => 'elementor-hf',
             'posts_per_page' => -1,
@@ -574,7 +587,8 @@ class Hnice_Merlin_Config {
         wp_reset_postdata();
     }
 
-    public function set_demo_menus() {
+    public function set_demo_menus()
+    {
         $main_menu = get_term_by('name', 'Main Menu', 'nav_menu');
 
         set_theme_mod(
@@ -586,7 +600,8 @@ class Hnice_Merlin_Config {
         );
     }
 
-    private function set_hf($home) {
+    private function set_hf($home)
+    {
         $all_hf = $this->get_all_header_footer();
         $datas  = $all_hf[$home];
         foreach ($datas as $item) {
@@ -602,7 +617,8 @@ class Hnice_Merlin_Config {
         }
     }
 
-    public function render_child_functions_php() {
+    public function render_child_functions_php()
+    {
         $output
             = "<?php
 /**
@@ -613,10 +629,11 @@ class Hnice_Merlin_Config {
         return $output;
     }
 
-    public function get_all_options(){
+    public function get_all_options()
+    {
         $options = [];
-        $options['options']   = json_decode('{"hnice_options_wocommerce_row_laptop":"4","hnice_options_woocommerce_archive_sidebar":"right","hnice_options_single_product_content_meta":"<ul class=\"custom-list\">\n<li><i class=\"hnice-icon-box\"></i> Free returns</li>\n<li><i class=\"hnice-icon-truck\"></i> Free shipping via DHL, fully insured</li>\n<li><i class=\"hnice-icon-check-square\"></i> All taxes and customs duties included </li>\n</ul>","hnice_options_wocommerce_row_tablet":"3","hnice_options_wocommerce_row_mobile":"2"}', true);
-        $options['elementor']   = json_decode('{"system_colors":[{"_id":"primary","title":"Primary","color":"#E6AF5D"},{"_id":"secondary","title":"Secondary(Heading)","color":"#332F2C"},{"_id":"text","title":"Text","color":"#8D9396"},{"_id":"accent","title":"Accent","color":"#332F2C"},{"_id":"lighter","title":"Lighter","color":"#8D9396"},{"_id":"dark","title":"Dark","color":"#000000"},{"_id":"border","title":"Border","color":"#EAEAEA"}],"custom_colors":[],"system_typography":[{"_id":"primary","title":"Primary","typography_typography":"custom","typography_font_family":"Marcellus","typography_font_weight":"400"},{"_id":"secondary","title":"Secondary(Heading)","typography_typography":"custom","typography_font_family":"Marcellus","typography_font_weight":"400"},{"_id":"text","title":"Text","typography_typography":"custom","typography_font_family":"Hnice","typography_font_weight":"400"},{"_id":"accent","title":"Accent","typography_typography":"custom","typography_font_family":"Hnice","typography_font_weight":"700"},{"_id":"special","title":"Special","typography_typography":"custom"}],"custom_typography":[],"default_generic_fonts":"Sans-serif","site_name":"Hnice","site_description":"Modern Funiture WooCommerce Theme","page_title_selector":"h1.entry-title","activeItemIndex":1,"active_breakpoints":["viewport_mobile","viewport_mobile_extra","viewport_tablet","viewport_tablet_extra","viewport_laptop"],"viewport_md":768,"viewport_lg":1025,"container_width":{"unit":"px","size":1410,"sizes":[]},"space_between_widgets":{"unit":"px","size":0,"sizes":[]},"body_background_background":"classic","body_background_color":"#fff"}', true);
+        $options['options']   = json_decode('{"hnice_options_wocommerce_row_laptop":"4","hnice_options_woocommerce_archive_sidebar":"right","hnice_options_single_product_content_meta":"<ul class=\"custom-list\">\n<li><i class=\"hnice-icon-box\"></i> Đổi trả linh hoạt</li>\n<li><i class=\"hnice-icon-truck\"></i> Giao hàng tận nơi và hỗ trợ lắp đặt</li>\n<li><i class=\"hnice-icon-check-square\"></i> Hỗ trợ/ Tư vấn 24/7 </li>\n</ul>","hnice_options_wocommerce_row_tablet":"3","hnice_options_wocommerce_row_mobile":"2"}', true);
+        $options['elementor']   = json_decode('{"system_colors":[{"_id":"primary","title":"Primary","color":"#00baee"},{"_id":"secondary","title":"Secondary(Heading)","color":"#332F2C"},{"_id":"text","title":"Text","color":"#8D9396"},{"_id":"accent","title":"Accent","color":"#332F2C"},{"_id":"lighter","title":"Lighter","color":"#8D9396"},{"_id":"dark","title":"Dark","color":"#000000"},{"_id":"border","title":"Border","color":"#EAEAEA"}],"custom_colors":[],"system_typography":[{"_id":"primary","title":"Primary","typography_typography":"custom","typography_font_family":"Marcellus","typography_font_weight":"400"},{"_id":"secondary","title":"Secondary(Heading)","typography_typography":"custom","typography_font_family":"Marcellus","typography_font_weight":"400"},{"_id":"text","title":"Text","typography_typography":"custom","typography_font_family":"Hnice","typography_font_weight":"400"},{"_id":"accent","title":"Accent","typography_typography":"custom","typography_font_family":"Hnice","typography_font_weight":"700"},{"_id":"special","title":"Special","typography_typography":"custom"}],"custom_typography":[],"default_generic_fonts":"Sans-serif","site_name":"Hnice","site_description":"Modern Funiture WooCommerce Theme","page_title_selector":"h1.entry-title","activeItemIndex":1,"active_breakpoints":["viewport_mobile","viewport_mobile_extra","viewport_tablet","viewport_tablet_extra","viewport_laptop"],"viewport_md":768,"viewport_lg":1025,"container_width":{"unit":"px","size":1410,"sizes":[]},"space_between_widgets":{"unit":"px","size":0,"sizes":[]},"body_background_background":"classic","body_background_color":"#fff"}', true);
         return $options;
     } // end get_all_options
 }

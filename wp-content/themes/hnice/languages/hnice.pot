@@ -5143,7 +5143,7 @@ msgstr ""
 
 #: inc/woocommerce/woocommerce-template-functions.php:284
 #: woocommerce/product-searchform.php:25
-msgid "Search products&hellip;"
+msgid "Tìm kiếm sản phẩm&hellip;"
 msgstr ""
 
 #: inc/woocommerce/woocommerce-template-functions.php:337
@@ -5370,7 +5370,7 @@ msgstr[0] ""
 msgstr[1] ""
 
 #: woocommerce/single-product/related.php:38
-msgid "Related products"
+msgid "Sản phẩm liên quan"
 msgstr ""
 
 #: woocommerce/single-product/up-sells.php:37

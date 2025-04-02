@@ -1332,7 +1332,7 @@ if ( ! function_exists( 'woosw_init' ) ) {
                                                 </p>
                                                 <ul>
                                                     <li>
-                                                        <label><input type="checkbox" name="woosw_settings[suggested][]" value="related" <?php echo esc_attr( in_array( 'related', $suggested ) ? 'checked' : '' ); ?>/> <?php esc_html_e( 'Related products', 'woo-smart-wishlist' ); ?>
+                                                        <label><input type="checkbox" name="woosw_settings[suggested][]" value="related" <?php echo esc_attr( in_array( 'related', $suggested ) ? 'checked' : '' ); ?>/> <?php esc_html_e( 'Sản phẩm liên quan', 'woo-smart-wishlist' ); ?>
                                                         </label></li>
                                                     <li>
                                                         <label><input type="checkbox" name="woosw_settings[suggested][]" value="up_sells" <?php echo esc_attr( in_array( 'up_sells', $suggested ) ? 'checked' : '' ); ?>/> <?php esc_html_e( 'Upsells products', 'woo-smart-wishlist' ); ?>

@@ -484,7 +484,7 @@ msgid "Suggested products"
 msgstr ""
 
 #: wpc-smart-quick-view.php:1003
-msgid "Related products"
+msgid "Sản phẩm liên quan"
 msgstr ""
 
 #: wpc-smart-quick-view.php:1006

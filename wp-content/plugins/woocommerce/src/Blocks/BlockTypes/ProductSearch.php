@@ -41,7 +41,7 @@ class ProductSearch extends AbstractBlock {
 				'align'       => '',
 				'className'   => '',
 				'label'       => __( 'Search', 'woocommerce' ),
-				'placeholder' => __( 'Search products…', 'woocommerce' ),
+				'placeholder' => __( 'Tìm kiếm sản phẩm…', 'woocommerce' ),
 			)
 		);
 

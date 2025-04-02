@@ -13,7 +13,7 @@ if (!defined('ABSPATH')) {
 }
 
 /**
- * Product categories widget class.
+ * Thư mục sản phẩm widget class.
  *
  * @extends WC_Widget
  */
