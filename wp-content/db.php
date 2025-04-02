@@ -1,0 +1,1 @@
+/var/www/html/sankaqua/wp-content/plugins/query-monitor/wp-content/db.php

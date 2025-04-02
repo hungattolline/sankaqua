@@ -3,7 +3,6 @@
  * The base configuration for WordPress
  *
  * The wp-config.php creation script uses this file during the installation.
- * You don't have to use the website, you can copy this file to "wp-config.php"
  * and fill in the values.
  *
  * This file contains the following configurations:
@@ -18,15 +17,17 @@
  * @package WordPress
  */
 
+
+define('WP_MEMORY_LIMIT', '256M');
 // ** Database settings - You can get this info from your web host ** //
 /** The name of the database for WordPress */
 define( 'DB_NAME', 'sankaqua' );
 
 /** Database username */
-define( 'DB_USER', 'root' );
+define( 'DB_USER', 'sankaqua' );
 
 /** Database password */
-define( 'DB_PASSWORD', 'root' );
+define( 'DB_PASSWORD', 'sankaqua' );
 
 /** Database hostname */
 define( 'DB_HOST', 'localhost' );
@@ -81,6 +82,7 @@ $table_prefix = 'sanka_';
  */
 define( 'WP_DEBUG', false );
 
+define( 'WP_DEBUG_LOG', false );
 /* Add any custom values between this line and the "stop editing" line. */
 
 
